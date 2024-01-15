@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototipo 2</title>
+  <!-- BOOTSTRAP 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --navbar-bg-color: #3c3365;
+      /* Reemplaza #tuColorDeFondo con el código de color que desees */
+      --navbar-text-color: #ffffff;
+      /* Reemplaza #ffffff con el código de color que desees */
+    }
+
+    .navbar-custom {
+      background-color: var(--navbar-bg-color);
+      color: var(--navbar-text-color);
+    }
+
+    .nav-color {
+      color: var(--navbar-bg-color);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark"> -->
+   <nav class="navbar navbar-custom navbar-expand-lg">
+    <div class="container-fluid text-white">
+      <a class="navbar-brand text-white" href="#">Prototipo 2</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active text-white" aria-current="page" href="#">Producción</a>
+          <a class="nav-link text-white" href="#">Gastos</a>
+          <a class="nav-link text-white" href="#">Ventas</a>
+          <a class="nav-link text-white disabled" aria-disabled="true">Consolidado</a>
+        </div>
+      </div>
+    </div>
+  </nav> 
+
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card mt-3 shadow rounded" style="width: 30rem;">
+      <div class="card-header text-center navbar-custom">
+        <div class="row fw-light">
+          PRODUCCIÓN
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-1 text-white">
+            < </div>
+              <div class="col-3"> Enero </div>
+              <div class="col-1 text-white"> > </div>
+          </div>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            <div class="row align-items-start">
+              <div class="col-md-9">
+                <i class="fa-solid fa-arrow-right text-success"></i> Ingresos
+              </div>
+              <div class="col-md-3 text-success">
+                $2,500
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row align-items-start">
+              <div class="col-md-9">
+                <i class="fa-solid fa-arrow-left text-danger"></i> Egresos
+              </div>
+              <div class="col-md-3 text-danger">
+                $3,000
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row align-items-start">
+              <div class="col-md-9">
+                <i class="fa-solid fa-calendar text-primary-emphasis"></i> Estimado de gastos mensuales por rubro
+              </div>
+              <div class="col-md-3 text-success">
+                $40,000
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row align-items-start">
+              <div class="col-md-9">
+                <i class="fa-solid fa-screwdriver-wrench text-primary"></i> Gastos de operación
+              </div>
+              <div class="col-md-3 text-danger">
+                $10,000
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row align-items-start">
+              <div class="col-md-9">
+                <i class="fa-solid fa-user-tie text-primary-emphasis"></i> Gastos de administración
+              </div>
+              <div class="col-md-3 text-danger">
+                $15,000
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="row align-items-start">
+              <div class="col-md-9">
+                <i class="fa-solid fa-cart-shopping text-danger-emphasis"></i> Gastos de venta
+              </div>
+              <div class="col-md-3 text-danger">
+                $15,000
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="card-footer text-center">
+          <i class="fa-solid fa-3x fa-circle-plus nav-color" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">AGREGAR REGISTRO</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <button class="btn btn-success">Traspaso</button>
+            <button class="btn btn-success">Ingreso</button>
+            <button class="btn btn-success">Gasto con tarjeta</button>
+            <button class="btn btn-success">Gasto</button>
+<!--             <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="concepto" class="form-label">CONCEPTO</label>
+                <input type="text" class="form-control" id="concepto" placeholder="Ingresa concepto">
+              </div>
+              <div class="col-md-6">
+                <label for="codigo" class="form-label">CÓDIGO</label>
+                <input type="text" class="form-control" id="codigo" placeholder="Ingresa código">
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="precio" class="form-label">PRECIO</label>
+                <input type="text" class="form-control" id="precio" placeholder="Ingresa precio">
+              </div>
+              <div class="col-md-6">
+                <label for="unidad" class="form-label">UNIDAD</label>
+                <input type="text" class="form-control" id="unidad" placeholder="Ingresa unidad">
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="fecha" class="form-label">FECHA</label>
+                <input type="date" class="form-control" id="fecha" placeholder="Ingresa fecha">
+              </div>
+            </div> -->
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Agregar registro</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <!--           <div class="modal-body">
+            <div class="row">
+              <div class="col-md-3 text-center">
+                <i class="fa-solid fa-2x fa-circle-check text-success"></i>
+                <br> Realizado
+              </div>
+              <div class="col-md-3 text-center">
+                <i class="fa-solid fa-2x fa-chart-simple text-danger"></i>
+                <br> Gasto
+              </div>
+              <div class="col-md-3 text-center">
+                <i class="fa-solid fa-2x fa-image"></i>
+                <br> Anexo
+              </div>
+              <div class="col-md-3 text-center">
+                <i class="fa-regular fa-2x fa-heart"></i>
+                <br> Favorita
+              </div>
+            </div>
+          </div> -->
+          <div class="modal-header navbar-custom">
+
+            <h1 class="modal-title fs-5" id="exampleModalLabel">EDITAR REGISTRO</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingPassword" placeholder=""
+                    value="BUFFET DE ESPADAS">
+                  <label for="floatingPassword"><i class="fa-solid fa-sheet-plastic"></i> CONCEPTO</label>
+                </div>
+                <!-- <i class="fa-solid fa-sheet-plastic"></i>
+                <label for="concepto" class="form-label fw-lighter fw-bold"> CONCEPTO</label>
+                <input type="text" class="form-control form-control-sm" id="concepto" placeholder="" value="BUFFET DE ESPADAS	"> -->
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingPassword" placeholder="" value="1002">
+                  <label for="floatingPassword"><i class="fa-solid fa-barcode"></i> CÓDIGO</label>
+                </div>
+                <!-- <label for="codigo" class="form-label">CÓDIGO</label>
+                <input type="text" class="form-control" id="codigo" placeholder="Ingresa código"> -->
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control text-success" id="floatingPassword" placeholder=""
+                    value="$2,223">
+                  <label for="floatingPassword"><i class="fa-solid fa-dollar-sign"></i> PRECIO</label>
+                </div>
+                <!-- <label for="precio" class="form-label">PRECIO</label>
+                <input type="text" class="form-control" id="precio" placeholder="Ingresa precio"> -->
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingPassword" placeholder="" value="PZA">
+                  <label for="floatingPassword"><i class="fa-solid fa-weight-scale"></i> UNIDAD</label>
+                </div>
+                <!-- <label for="unidad" class="form-label">UNIDAD</label>
+                <input type="text" class="form-control" id="unidad" placeholder="Ingresa unidad"> -->
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="date" class="form-control" id="floatingPassword" placeholder="">
+                  <label for="floatingPassword"><i class="fa-solid fa-calendar-days"></i> FECHA</label>
+                </div>
+                <!-- <label for="fecha" class="form-label">FECHA</label>
+                <input type="date" class="form-control" id="fecha" placeholder="Ingresa fecha"> -->
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn navbar-custom">Agregar registro</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- BOOTSTRAP 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"></script>
+
+</body>
+
+</html>
