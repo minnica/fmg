@@ -33,13 +33,20 @@
           ></i>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Traspaso</a></li>
-            <li><a class="dropdown-item" href="#">Ingreso</a></li>
+            <li>
+              <a
+                class="dropdown-item"
+                data-bs-toggle="modal"
+                data-bs-target="#modalIngresos"
+                >Ingreso</a
+              >
+            </li>
             <li><a class="dropdown-item" href="#">Gasto con tarjeta</a></li>
             <li>
               <a
                 class="dropdown-item"
                 data-bs-toggle="modal"
-                data-bs-target="#modalGasto"
+                data-bs-target="#modalGastos"
                 >Gasto</a
               >
             </li>
@@ -50,8 +57,8 @@
       </div>
     </nav>
 
-    <!-- Modales -->
-    <div class="modal fade" id="modalGasto" tabindex="-1" aria-hidden="true">
+    <!-- Modal Gastos -->
+    <div class="modal fade" id="modalGastos" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bg-danger text-white">
@@ -117,7 +124,6 @@
                 />
               </div>
             </div>
-
             <hr />
             <div class="mb-3 row">
               <div class="col-2">
@@ -163,6 +169,123 @@
           </div>
           <div class="modal-footer d-flex justify-content-center">
             <i class="fa-solid fa-circle-check fa-4x text-danger"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Ingresos -->
+    <div class="modal fade" id="modalIngresos" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-white">
+            <h1 class="modal-title fs-5">NUEVO INGRESO</h1>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="cantidadGasto" class="form-label"
+                >Cantidad de ingresos</label
+              >
+              <input
+                type="number"
+                class="form-control-plaintext form-control-lg text-success"
+                id="cantidadGasto"
+                placeholder="$0.00"
+              />
+            </div>
+            <hr />
+            <div class="mb-3 row">
+              <div class="col-2">
+                <i class="fa-light fa-circle-check fa-2x text-black-50"></i>
+              </div>
+              <div class="form-check form-switch col-10">
+                <label class="form-check-label" for="realizadoCheck"
+                  >Realizado</label
+                >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="realizadoCheck"
+                  checked
+                />
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3 row">
+              <div class="col-2">
+                <i class="fa-light fa-calendar fa-2x text-black-50"></i>
+              </div>
+              <div class="col-10">
+                <button class="btn btn-success">Hoy</button>
+                <button class="btn btn-light">Ayer</button>
+                <button class="btn btn-light">Otros</button>
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3 row">
+              <div class="col-2">
+                <i class="fa-light fa-microphone fa-2x text-black-50"></i>
+              </div>
+              <div class="col-10">
+                <input
+                  type="text"
+                  class="form-control-plaintext"
+                  placeholder="Descripción"
+                />
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3 row">
+              <div class="col-2">
+                <i class="fa-light fa-layer-group fa-2x text-black-50"></i>
+              </div>
+              <div class="col-9">
+                <button class="btn btn-outline-primary">
+                  <i class="fa-solid fa-globe"></i>
+                  Agua
+                </button>
+              </div>
+              <div class="col-1">
+                <i class="fa-light fa-angle-right fa-2x text-black-50"></i>
+              </div>
+            </div>
+            <hr />
+            <div class="mb-3 row">
+              <div class="col-2">
+                <i class="fa-light fa-wallet fa-2x text-black-50"></i>
+              </div>
+              <div class="col-9">
+                <button class="btn btn-outline-success">
+                  <i class="fa-solid fa-pen-nib"></i>
+                  Afirme
+                </button>
+              </div>
+              <div class="col-1">
+                <i class="fa-light fa-angle-right fa-2x text-black-50"></i>
+              </div>
+            </div>
+            <hr />
+            <div class="row">
+              <div class="col-2">
+                <i class="fa-light fa-image fa-2x text-black-50"></i>
+              </div>
+              <div class="col-9">
+                <p class="text-secondary">Anexo</p>
+              </div>
+              <div class="col-1">
+                <i class="fa-light fa-angle-right fa-2x text-black-50"></i>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <i class="fa-solid fa-circle-check fa-4x text-success"></i>
           </div>
         </div>
       </div>
