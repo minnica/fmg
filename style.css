@@ -1,4 +1,8 @@
-.bi {
+/* .bi {
     vertical-align: -.125em;
     fill: currentColor;
-  }
+  } */
+.purple-white {
+  background-color: #3c3365; 
+  color: white
+}
